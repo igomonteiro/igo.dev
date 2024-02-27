@@ -13,10 +13,10 @@ export async function send({ name, email, subject, message }: ContactForm) {
 	const resend = new Resend(process.env.RESEND_API_KEY);
 	try {
 		const { error } = await resend.emails.send({
-			from: email,
+			from: "igobmonteiro@gmail.com",
 			to: "igobmonteiro@gmail.com",
-			subject: `${subject} from ${name}`,
-			text: message,
+			subject: `${subject} from ${email}`,
+			text: `Message from ${name}: ${message}`,
 		});
 		if (error) {
 			throw Error("Failed to sent email");
