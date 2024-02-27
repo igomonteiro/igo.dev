@@ -13,7 +13,7 @@ export async function send({ name, email, subject, message }: ContactForm) {
 	const resend = new Resend(process.env.RESEND_API_KEY);
 	try {
 		const { error } = await resend.emails.send({
-			from: "onboarding@resend.dev",
+			from: email,
 			to: "igobmonteiro@gmail.com",
 			subject: `${subject} from ${name}`,
 			text: message,
