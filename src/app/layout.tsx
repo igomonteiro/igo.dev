@@ -15,10 +15,10 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en" className="text-sm">
+		<html lang="en">
 			<body className={inter.className}>
-				<main className="flex min-h-screen flex-col items-center justify-center gap-10">
-					<div className="bg-black border-2 border-purple rounded-xl w-[966px] h-[560px]">
+				<main className="flex min-h-screen flex-col items-center justify-center gap-10 p-4">
+					<div className="bg-black border-2 border-purple rounded-xl w-96 lg:w-[966px] min-h-[560px] p-8 md:pb-8">
 						{children}
 					</div>
 					<span className="select-none">Made with 🍙</span>

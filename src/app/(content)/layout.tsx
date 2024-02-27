@@ -7,7 +7,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<div className="mx-[164px]">
+		<div className="lg:mx-[164px]">
 			<Link href="/" className="flex items-center gap-2 my-[64px]">
 				<ArrowLeftIcon />
 				<span className="text-purple">Go back</span>

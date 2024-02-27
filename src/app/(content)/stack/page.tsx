@@ -2,7 +2,6 @@ export default function About() {
 	return (
 		<>
 			<span className="text-green mb-6 block">Programming stack</span>
-
 			<div className="flex flex-col gap-4">
 				<span className="text-purple block">Favorite &#9829;</span>
 				<div className="flex flex-col">
