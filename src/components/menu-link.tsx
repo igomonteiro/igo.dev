@@ -4,12 +4,14 @@ import { ReactNode } from "react";
 
 export interface MenuLinkProps extends LinkProps {
 	children: ReactNode;
+	openInNewWindow?: boolean;
 	selected?: boolean;
 	className?: string;
 }
 
 export function MenuLink({
 	children,
+	openInNewWindow,
 	className,
 	selected,
 	...props
@@ -17,6 +19,7 @@ export function MenuLink({
 	return (
 		<Link
 			{...props}
+			target={openInNewWindow ? "_blank" : "_self"}
 			data-selected={selected}
 			className={cn("data-[selected]:text-green hover:text-green", className)}
 		>

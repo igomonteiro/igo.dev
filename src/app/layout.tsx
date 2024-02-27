@@ -17,10 +17,11 @@ export default function RootLayout({
 	return (
 		<html lang="en" className="text-sm">
 			<body className={inter.className}>
-				<main className="flex min-h-screen items-center justify-center">
+				<main className="flex min-h-screen flex-col items-center justify-center gap-10">
 					<div className="bg-black border-2 border-purple rounded-xl w-[966px] h-[560px]">
 						{children}
 					</div>
+					<span className="select-none">Made with 🍙</span>
 				</main>
 			</body>
 		</html>

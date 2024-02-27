@@ -7,18 +7,22 @@ const menuLinks = [
 	{
 		label: "About",
 		href: "/about",
+		external: false,
 	},
 	{
 		label: "Programming stack",
 		href: "/stack",
+		external: false,
 	},
 	{
 		label: "Open curriculum",
-		href: "#",
+		href: "https://pub-a0db1886ae0b47b3bc7685b1bd565fb7.r2.dev/Curriculum%20-%20Igo%20Brasil%20Monteiro.pdf",
+		external: true,
 	},
 	{
 		label: "Get in touch",
 		href: "/contact",
+		external: false,
 	},
 ];
 
@@ -37,8 +41,8 @@ export default function Home() {
 					/>
 				</div>
 				<div className="text-center">
-					<span className="block">Hello, I'm Igo.</span>
-					<span className="block">Welcome to my website!</span>
+					<span className="block">Hi 🖖, I'm Igo.</span>
+					<span className="block">I'm a Full Stack Developer</span>
 				</div>
 				<div className="flex gap-2">
 					<a href="https://github.com/igomonteiro" className="hover:text-green">
@@ -58,7 +62,11 @@ export default function Home() {
 				<span>Press enter or click to select an option</span>
 				<div className="flex flex-col gap-3">
 					{menuLinks.map((menuLink) => (
-						<MenuLink key={menuLink.href} href={menuLink.href}>
+						<MenuLink
+							key={menuLink.href}
+							href={menuLink.href}
+							openInNewWindow={menuLink.external}
+						>
 							&gt; {menuLink.label}
 						</MenuLink>
 					))}
